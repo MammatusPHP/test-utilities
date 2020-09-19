@@ -1,0 +1,48 @@
+{
+    "name": "mammatus/test-utilities",
+    "description": "\ud83d\udee0\ufe0f  Test utilities",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cees-Jan Kiewiet",
+            "email": "ceesjank@gmail.com",
+            "homepage": "http://wyrihaximus.net/"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "chimera/foundation": "^0.3",
+        "wyrihaximus/async-test-utilities": "^2.3"
+    },
+    "config": {
+        "platform": {
+            "php": "7.4.7"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "unused": [
+            "wyrihaximus/async-test-utilities"
+        ]
+    },
+    "autoload": {
+        "psr-4": {
+            "Mammatus\\TestUtilities\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Mammatus\\Tests\\TestUtilities\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-install-cmd": [
+            "composer normalize"
+        ],
+        "post-update-cmd": [
+            "composer normalize"
+        ]
+    }
+}

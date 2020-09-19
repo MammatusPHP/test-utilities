@@ -1,0 +1,11 @@
+parameters:
+	excludes_analyse:
+		- src/Generated/*
+	ergebnis:
+		classesAllowedToBeExtended:
+			- Exception
+			- Monolog\Handler\AbstractHandler
+			- ReactParallel\ObjectProxy\Generated\ProxyList
+
+includes:
+	- vendor/wyrihaximus/async-test-utilities/rules.neon
