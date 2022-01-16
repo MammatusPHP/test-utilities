@@ -10,21 +10,12 @@
         }
     ],
     "require": {
-        "php": "^7.4",
+        "php": "^8.1",
         "chimera/foundation": "^0.3",
-        "wyrihaximus/async-test-utilities": "^2.3 || ^3.0"
+        "wyrihaximus/async-test-utilities": "^4.2.0"
     },
-    "config": {
-        "platform": {
-            "php": "7.4.7"
-        },
-        "sort-packages": true
-    },
-    "extra": {
-        "unused": [
-            "wyrihaximus/async-test-utilities"
-        ]
-    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "Mammatus\\TestUtilities\\": "src/"
@@ -35,8 +26,23 @@
             "Mammatus\\Tests\\TestUtilities\\": "tests/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "infection/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "icanhazstring/composer-unused": true,
+            "ergebnis/composer-normalize": true
+        },
+        "platform": {
+            "php": "8.1.1"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "unused": [
+            "wyrihaximus/async-test-utilities"
+        ]
+    },
     "scripts": {
         "post-install-cmd": [
             "composer normalize"
